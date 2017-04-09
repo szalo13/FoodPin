@@ -77,9 +77,9 @@
 		4F8CFDE61E9AC4B6002B1D21 = {
 			isa = PBXGroup;
 			children = (
-				4F8CFDF11E9AC4B6002B1D21 /* TableApp */,
-				4F8CFE061E9AC4B6002B1D21 /* TableAppTests */,
-				4F8CFE111E9AC4B6002B1D21 /* TableAppUITests */,
+				4F8CFDF11E9AC4B6002B1D21 /* FoodPin */,
+				4F8CFE061E9AC4B6002B1D21 /* FoodPinAppTests */,
+				4F8CFE111E9AC4B6002B1D21 /* FoodPinAppUITests */,
 				4F8CFDF01E9AC4B6002B1D21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F8CFDF11E9AC4B6002B1D21 /* TableApp */ = {
+		4F8CFDF11E9AC4B6002B1D21 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
 				4F8CFDF21E9AC4B6002B1D21 /* AppDelegate.swift */,
@@ -104,24 +104,27 @@
 				4F8CFDFE1E9AC4B6002B1D21 /* Info.plist */,
 				4F8CFE201E9ADC2D002B1D21 /* Restaurant.swift */,
 			);
+			name = FoodPin;
 			path = TableApp;
 			sourceTree = "<group>";
 		};
-		4F8CFE061E9AC4B6002B1D21 /* TableAppTests */ = {
+		4F8CFE061E9AC4B6002B1D21 /* FoodPinAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				4F8CFE071E9AC4B6002B1D21 /* TableAppTests.swift */,
 				4F8CFE091E9AC4B6002B1D21 /* Info.plist */,
 			);
+			name = FoodPinAppTests;
 			path = TableAppTests;
 			sourceTree = "<group>";
 		};
-		4F8CFE111E9AC4B6002B1D21 /* TableAppUITests */ = {
+		4F8CFE111E9AC4B6002B1D21 /* FoodPinAppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				4F8CFE121E9AC4B6002B1D21 /* TableAppUITests.swift */,
 				4F8CFE141E9AC4B6002B1D21 /* Info.plist */,
 			);
+			name = FoodPinAppUITests;
 			path = TableAppUITests;
 			sourceTree = "<group>";
 		};
