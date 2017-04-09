@@ -11,8 +11,8 @@
 		4F8CFDF81E9AC4B6002B1D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF61E9AC4B6002B1D21 /* Main.storyboard */; };
 		4F8CFDFA1E9AC4B6002B1D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF91E9AC4B6002B1D21 /* Assets.xcassets */; };
 		4F8CFDFD1E9AC4B6002B1D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDFB1E9AC4B6002B1D21 /* LaunchScreen.storyboard */; };
-		4F8CFE081E9AC4B6002B1D21 /* TableAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE071E9AC4B6002B1D21 /* TableAppTests.swift */; };
-		4F8CFE131E9AC4B6002B1D21 /* TableAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE121E9AC4B6002B1D21 /* TableAppUITests.swift */; };
+		4F8CFE081E9AC4B6002B1D21 /* FoodPinAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE071E9AC4B6002B1D21 /* FoodPinAppTests.swift */; };
+		4F8CFE131E9AC4B6002B1D21 /* FoodPinAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE121E9AC4B6002B1D21 /* FoodPinAppUITests.swift */; };
 		4F8CFE211E9ADC2D002B1D21 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE201E9ADC2D002B1D21 /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +41,10 @@
 		4F8CFDFC1E9AC4B6002B1D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F8CFDFE1E9AC4B6002B1D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8CFE031E9AC4B6002B1D21 /* FoodPinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8CFE071E9AC4B6002B1D21 /* TableAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAppTests.swift; sourceTree = "<group>"; };
+		4F8CFE071E9AC4B6002B1D21 /* FoodPinAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinAppTests.swift; sourceTree = "<group>"; };
 		4F8CFE091E9AC4B6002B1D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8CFE0E1E9AC4B6002B1D21 /* FoodPinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8CFE121E9AC4B6002B1D21 /* TableAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAppUITests.swift; sourceTree = "<group>"; };
+		4F8CFE121E9AC4B6002B1D21 /* FoodPinAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPinAppUITests.swift; sourceTree = "<group>"; };
 		4F8CFE141E9AC4B6002B1D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8CFE201E9ADC2D002B1D21 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +111,7 @@
 		4F8CFE061E9AC4B6002B1D21 /* FoodPinAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F8CFE071E9AC4B6002B1D21 /* TableAppTests.swift */,
+				4F8CFE071E9AC4B6002B1D21 /* FoodPinAppTests.swift */,
 				4F8CFE091E9AC4B6002B1D21 /* Info.plist */,
 			);
 			name = FoodPinAppTests;
@@ -121,7 +121,7 @@
 		4F8CFE111E9AC4B6002B1D21 /* FoodPinAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4F8CFE121E9AC4B6002B1D21 /* TableAppUITests.swift */,
+				4F8CFE121E9AC4B6002B1D21 /* FoodPinAppUITests.swift */,
 				4F8CFE141E9AC4B6002B1D21 /* Info.plist */,
 			);
 			name = FoodPinAppUITests;
@@ -271,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8CFE081E9AC4B6002B1D21 /* TableAppTests.swift in Sources */,
+				4F8CFE081E9AC4B6002B1D21 /* FoodPinAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8CFE131E9AC4B6002B1D21 /* TableAppUITests.swift in Sources */,
+				4F8CFE131E9AC4B6002B1D21 /* FoodPinAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
