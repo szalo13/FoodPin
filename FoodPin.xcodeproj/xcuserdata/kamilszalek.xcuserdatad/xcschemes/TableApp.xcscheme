@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4F8CFDEE1E9AC4B6002B1D21"
-               BuildableName = "TableApp.app"
-               BlueprintName = "TableApp"
-               ReferencedContainer = "container:TableApp.xcodeproj">
+               BuildableName = "FoodPin.app"
+               BlueprintName = "FoodPin"
+               ReferencedContainer = "container:FoodPin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4F8CFE021E9AC4B6002B1D21"
-               BuildableName = "TableAppTests.xctest"
-               BlueprintName = "TableAppTests"
-               ReferencedContainer = "container:TableApp.xcodeproj">
+               BuildableName = "FoodPinTests.xctest"
+               BlueprintName = "FoodPinTests"
+               ReferencedContainer = "container:FoodPin.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4F8CFE0D1E9AC4B6002B1D21"
-               BuildableName = "TableAppUITests.xctest"
-               BlueprintName = "TableAppUITests"
-               ReferencedContainer = "container:TableApp.xcodeproj">
+               BuildableName = "FoodPinUITests.xctest"
+               BlueprintName = "FoodPinUITests"
+               ReferencedContainer = "container:FoodPin.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F8CFDEE1E9AC4B6002B1D21"
-            BuildableName = "TableApp.app"
-            BlueprintName = "TableApp"
-            ReferencedContainer = "container:TableApp.xcodeproj">
+            BuildableName = "FoodPin.app"
+            BlueprintName = "FoodPin"
+            ReferencedContainer = "container:FoodPin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F8CFDEE1E9AC4B6002B1D21"
-            BuildableName = "TableApp.app"
-            BlueprintName = "TableApp"
-            ReferencedContainer = "container:TableApp.xcodeproj">
+            BuildableName = "FoodPin.app"
+            BlueprintName = "FoodPin"
+            ReferencedContainer = "container:FoodPin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4F8CFDEE1E9AC4B6002B1D21"
-            BuildableName = "TableApp.app"
-            BlueprintName = "TableApp"
-            ReferencedContainer = "container:TableApp.xcodeproj">
+            BuildableName = "FoodPin.app"
+            BlueprintName = "FoodPin"
+            ReferencedContainer = "container:FoodPin.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TableApp.xcodeproj">
+      location = "self:/Users/kamilszalek/Projects/Swift/TableApp/FoodPin.xcodeproj">
    </FileRef>
 </Workspace>
