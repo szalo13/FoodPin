@@ -95,6 +95,7 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
 
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Create alert after choosing call to
@@ -152,6 +153,8 @@ class RestaurantTableViewController: UITableViewController {
         // Deselect Row
         tableView.deselectRow(at: indexPath, animated: false)
     }
+    */
+    
     
     // Adding share swipe actions button
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -194,14 +197,23 @@ class RestaurantTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailViewController
+                destinationController.restaurantImage = restaurants[indexPath.row].image
+                destinationController.restaurantName = restaurants[indexPath.row].name
+                destinationController.restaurantType = restaurants[indexPath.row].type
+                destinationController.restaurantLocation = restaurants[indexPath.row].location
+                destinationController.restaurantIsVisited = restaurants[indexPath.row].isVisited
+            }
+        }
     }
-    */
+
 
 }
