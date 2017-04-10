@@ -93,8 +93,32 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Create alert after choosing call to
+        let callActionHandler = { (action: UIAlertAction!) -> Void in
+        
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
+            
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            self.present(alertMessage, animated: true, completion: nil)
+        }
+        
+        
         // Create an option menu as an action sheet
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do?" + " Index: " + String(indexPath.row), preferredStyle: .actionSheet)
+        
+        // Check-in action
+        let checkInAction = UIAlertAction(title: "Check In", style: .default, handler: {
+            (action: UIAlertAction!) -> Void in
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+        })
+        optionMenu.addAction(checkInAction)
+        
+        let callAction = UIAlertAction(title: "Call " + "341-231-\(indexPath.row)", style: .default, handler: callActionHandler)
+        optionMenu.addAction(callAction)
         
         // Add actions to the menu
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -102,6 +126,9 @@ class RestaurantTableViewController: UITableViewController {
         
         // Display the menu
         present(optionMenu, animated: true, completion: nil)
+        
+        // Deselect Row
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
