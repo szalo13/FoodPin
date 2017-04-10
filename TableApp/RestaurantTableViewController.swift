@@ -152,36 +152,33 @@ class RestaurantTableViewController: UITableViewController {
         // Deselect Row
         tableView.deselectRow(at: indexPath, animated: false)
     }
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
     
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    // Adding share swipe actions button
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        if editingStyle == .delete {
-            restaurants.remove(at: indexPath.row)
+        // Social sharing button
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: {
+            (action, indexPath) -> Void in
+            
+            let defaultText = "Just checking in at \(self.restaurants[indexPath.row])"
+            
+            if let imageToShare = UIImage(named: self.restaurants[indexPath.row].image) {
+                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+            }
+        })
+        shareAction.backgroundColor = UIColor(red: 48.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        
+        // Delete button
+        let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: {
+            (action, indexPath) -> Void in
+            
+            self.restaurants.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        }
+        })
         
+        return [deleteAction, shareAction]
     }
-    
-
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
