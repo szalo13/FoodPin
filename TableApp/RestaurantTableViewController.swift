@@ -111,6 +111,7 @@ class RestaurantTableViewController: UITableViewController {
         // Create an option menu as an action sheet
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do?" + " Index: " + String(indexPath.row), preferredStyle: .actionSheet)
         
+        // Check-in's section
         // Check-in action
         let checkInAction = UIAlertAction(title: "Check In", style: .default, handler: {
             (action: UIAlertAction!) -> Void in
@@ -121,8 +122,23 @@ class RestaurantTableViewController: UITableViewController {
             self.restaurants[indexPath.row].isVisited = true
         })
         
-        optionMenu.addAction(checkInAction)
+        // Undo check-in action
+        let undoCheckInAction = UIAlertAction(title: "Undo Check In", style: .default, handler: {
+            (action: UIAlertAction!) -> Void in
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .none
+            
+            self.restaurants[indexPath.row].isVisited = false
+        })
         
+        if !self.restaurants[indexPath.row].isVisited {
+            optionMenu.addAction(checkInAction)
+        } else {
+            optionMenu.addAction(undoCheckInAction)
+        }
+        
+        // Call auction
         let callAction = UIAlertAction(title: "Call " + "341-231-\(indexPath.row)", style: .default, handler: callActionHandler)
         optionMenu.addAction(callAction)
         
