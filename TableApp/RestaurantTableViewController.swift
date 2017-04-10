@@ -26,7 +26,7 @@ class RestaurantTableViewController: UITableViewController {
                 Restaurant(name: "Bourke Street Backery", type: "Chocolate", location:
                     "Sydney", image: "bourkestreetbakery.jpg", isVisited: false),
                 Restaurant(name: "Haigh's Chocolate", type: "Cafe", location: "Sydney",
-                           image: "haighschocolate.jpg", isVisited: false),
+                           image: "haighschocolate.jpg", isVisited: true),
                 Restaurant(name: "Palomino Espresso", type: "American / Seafood", location:
                     "Sydney", image: "palominoespresso.jpg", isVisited: false),
                 Restaurant(name: "Upstate", type: "American", location: "New York", image:
@@ -45,6 +45,7 @@ class RestaurantTableViewController: UITableViewController {
                     Restaurant(name: "Barrafina", type: "Spanish", location: "London", image:
                         "barrafina.jpg", isVisited: false)
         ]
+    
                     
                     
     override func viewDidLoad() {
@@ -85,6 +86,8 @@ class RestaurantTableViewController: UITableViewController {
         cell.locationLabel.text = restaurants[indexPath.row].location
         cell.typeLabel.text = restaurants[indexPath.row].type
         
+        cell.accessoryType = restaurants[indexPath.row].isVisited ? .checkmark : .none
+        
         // Configure cell layout
         cell.thumbnailImageView.layer.cornerRadius = 30.0
         cell.thumbnailImageView.clipsToBounds = true
@@ -114,7 +117,10 @@ class RestaurantTableViewController: UITableViewController {
             
             let cell = tableView.cellForRow(at: indexPath)
             cell?.accessoryType = .checkmark
+            
+            self.restaurants[indexPath.row].isVisited = true
         })
+        
         optionMenu.addAction(checkInAction)
         
         let callAction = UIAlertAction(title: "Call " + "341-231-\(indexPath.row)", style: .default, handler: callActionHandler)
