@@ -8,28 +8,48 @@
 
 import UIKit
 
-class RestaurantDetailViewController: UIViewController {
+class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var restaurantImageView: UIImageView!
-    @IBOutlet var restaurantNameLabel: UILabel!
-    @IBOutlet var restaurantTypeLabel: UILabel!
-    @IBOutlet var restaurantLocationLabel: UILabel!
-    @IBOutlet var restaurantIsVisitedLabel: UILabel!
     
-    var restaurantImage = ""
-    var restaurantName = ""
-    var restaurantType = ""
-    var restaurantLocation = ""
-    var restaurantIsVisited = false
+    var restaurant: Restaurant!
+    var restaurantImage =  ""
 
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->
+        Int {
+            return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
+        UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RestaurantDetailTableViewCell
+            
+            //Configure the cell
+            switch indexPath.row {
+            case 0:
+                cell.fieldLabel.text = "Name"
+                cell.valueLabel.text = restaurant.name
+            case 1:
+                cell.fieldLabel.text = "Type"
+                cell.valueLabel.text = restaurant.type
+            case 2:
+                cell.fieldLabel.text = "Location"
+                cell.valueLabel.text = restaurant.location
+            case 3:
+                cell.fieldLabel.text = "Type"
+                cell.valueLabel.text = (restaurant.isVisited) ? "Yes" : "No"
+            default:
+                cell.fieldLabel.text = ""
+                cell.fieldLabel.text = ""
+            }
+            return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.restaurantImageView.image = UIImage(named: restaurantImage)
-        self.restaurantNameLabel.text = self.restaurantName
-        self.restaurantTypeLabel.text = self.restaurantType
-        self.restaurantLocationLabel.text = self.restaurantLocation
-        self.restaurantIsVisitedLabel.text = self.restaurantIsVisited ? "Yes" : "No"
+        restaurantImageView.image = UIImage(named: self.restaurant.image)
         
         // Do any additional setup after loading the view.
     }
