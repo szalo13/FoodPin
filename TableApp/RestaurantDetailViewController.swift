@@ -48,7 +48,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        title = restaurant.name
+        
+        // Signing photo
         restaurantImageView.image = UIImage(named: self.restaurant.image)
         
         // Do any additional setup after loading the view.
@@ -57,6 +60,13 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
 
