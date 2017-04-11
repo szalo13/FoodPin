@@ -11,6 +11,7 @@ import UIKit
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var restaurantImageView: UIImageView!
+    @IBOutlet var tableView: UITableView!
     
     var restaurant: Restaurant!
     var restaurantImage =  ""
@@ -50,6 +51,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         super.viewDidLoad()
         
         title = restaurant.name
+        
+        // Auto Cells
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         // Signing photo
         restaurantImageView.image = UIImage(named: self.restaurant.image)
