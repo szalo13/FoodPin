@@ -268,9 +268,9 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij9-e9-1TB">
-                                            <rect key="frame" x="287" y="230" width="80" height="16"/>
+                                            <rect key="frame" x="217" y="230" width="150" height="16"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="Syu-aF-hyx"/>
+                                                <constraint firstAttribute="width" constant="150" id="zIk-bE-bt2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -292,6 +292,7 @@
                                     <outlet property="nameLabel" destination="qlg-eD-TFB" id="hKw-eI-FMp"/>
                                     <outlet property="thumbnailImageView" destination="X1c-gt-sz4" id="u0d-Y1-Scy"/>
                                     <outlet property="typeLabel" destination="ESK-Og-gQw" id="bQR-6g-bes"/>
+                                    <segue destination="RlJ-jq-lpk" kind="show" identifier="showRestaurantDetail" id="i1Q-dl-bLc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -307,4 +308,7 @@
             <point key="canvasLocation" x="964" y="796.55172413793105"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="i1Q-dl-bLc"/>
+    </inferredMetricsTieBreakers>
 </document>

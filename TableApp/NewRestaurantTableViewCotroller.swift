@@ -102,7 +102,6 @@ class NewRestaurantTableViewController: UITableViewController {
         cell.accessoryType = restaurants[indexPath.row].isVisited ? .checkmark : .none
         
         // Configure cell layout
-        cell.thumbnailImageView.layer.cornerRadius = 30.0
         cell.thumbnailImageView.clipsToBounds = true
         
         return cell
