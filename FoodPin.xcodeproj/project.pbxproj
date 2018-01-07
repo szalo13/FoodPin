@@ -18,6 +18,7 @@
 		4F8CFE231E9AE198002B1D21 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE221E9AE198002B1D21 /* RestaurantTableViewController.swift */; };
 		4F8CFE251E9AE9AD002B1D21 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE241E9AE9AD002B1D21 /* RestaurantTableViewCell.swift */; };
 		4F8CFE271E9BBA1D002B1D21 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE261E9BBA1D002B1D21 /* RestaurantDetailViewController.swift */; };
+		4FD1BB1E1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD1BB1D1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4F8CFE221E9AE198002B1D21 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		4F8CFE241E9AE9AD002B1D21 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		4F8CFE261E9BBA1D002B1D21 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		4FD1BB1D1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRestaurantTableViewCotroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				4F8CFE221E9AE198002B1D21 /* RestaurantTableViewController.swift */,
 				4F8CFE241E9AE9AD002B1D21 /* RestaurantTableViewCell.swift */,
 				4F8CFE261E9BBA1D002B1D21 /* RestaurantDetailViewController.swift */,
+				4FD1BB1D1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift */,
 				4F29EF0C1E9D529B00C813DB /* RestaurantDetailTableViewCell.swift */,
 			);
 			name = FoodPin;
@@ -276,6 +279,7 @@
 			files = (
 				4F8CFE251E9AE9AD002B1D21 /* RestaurantTableViewCell.swift in Sources */,
 				4F8CFDF31E9AC4B6002B1D21 /* AppDelegate.swift in Sources */,
+				4FD1BB1E1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift in Sources */,
 				4F8CFE271E9BBA1D002B1D21 /* RestaurantDetailViewController.swift in Sources */,
 				4F29EF0D1E9D529B00C813DB /* RestaurantDetailTableViewCell.swift in Sources */,
 				4F8CFE211E9ADC2D002B1D21 /* Restaurant.swift in Sources */,

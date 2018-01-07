@@ -33,38 +33,6 @@
             endingLineNumber = "14"
             landmarkName = "restaurants"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodPin.RestaurantTableViewController.init (style : __C.UITableViewStyle) -&gt; FoodPin.RestaurantTableViewController"
-                  moduleName = "FoodPin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kamilszalek/Projects/Swift/TableApp/TableApp/RestaurantTableViewController.swift"
-                  timestampString = "513639768.137989"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodPin.RestaurantTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;FoodPin.RestaurantTableViewController&gt;"
-                  moduleName = "FoodPin"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kamilszalek/Projects/Swift/TableApp/TableApp/RestaurantTableViewController.swift"
-                  timestampString = "513639768.14315"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

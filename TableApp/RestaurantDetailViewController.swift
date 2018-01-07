@@ -50,7 +50,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = restaurant.name
+        // title = restaurant.name
         
         // Auto Cells
         tableView.estimatedRowHeight = 36.0
