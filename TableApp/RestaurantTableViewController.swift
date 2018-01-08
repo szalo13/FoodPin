@@ -46,7 +46,8 @@ class RestaurantTableViewController: UITableViewController {
                 Restaurant(name: "Royal Oak", type: "British", location: "2 Regency Street London SW1P 4BZ United Kingdom", phone: "343-988834", image: "royaloak.jpg", isVisited: false),
                 Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "22 Charlwood Street London SW1V 2DY Pimlico", phone: "432-344050", image: "caskpubkitchen.jpg", isVisited: false)
     ]
-                    
+    
+    var books = [] as Array
                     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,21 +56,9 @@ class RestaurantTableViewController: UITableViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style:
             .plain, target: nil, action: nil)
         
-        let path = Bundle.main.path(forResource: "Books", ofType: "json")!
-        let jsonString = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
-        let json = JSON(parseJSON: jsonString!)
-        
-        print(json)
-        
         // Auto Cells
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,9 +71,7 @@ class RestaurantTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -100,6 +87,7 @@ class RestaurantTableViewController: UITableViewController {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
+        
         // Configure the cell
         cell.nameLabel.text = restaurants[indexPath.row].name
         cell.thumbnailImageView.image = UIImage(named: restaurants[indexPath.row].image)
@@ -114,67 +102,6 @@ class RestaurantTableViewController: UITableViewController {
         
         return cell
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        // Create alert after choosing call to
-        let callActionHandler = { (action: UIAlertAction!) -> Void in
-        
-            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-            
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            
-            self.present(alertMessage, animated: true, completion: nil)
-        }
-        
-        
-        // Create an option menu as an action sheet
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?" + " Index: " + String(indexPath.row), preferredStyle: .actionSheet)
-        
-        // Check-in's section
-        // Check-in action
-        let checkInAction = UIAlertAction(title: "Check In", style: .default, handler: {
-            (action: UIAlertAction!) -> Void in
-            
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-            
-            self.restaurants[indexPath.row].isVisited = true
-        })
-        
-        // Undo check-in action
-        let undoCheckInAction = UIAlertAction(title: "Undo Check In", style: .default, handler: {
-            (action: UIAlertAction!) -> Void in
-            
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .none
-            
-            self.restaurants[indexPath.row].isVisited = false
-        })
-        
-        if !self.restaurants[indexPath.row].isVisited {
-            optionMenu.addAction(checkInAction)
-        } else {
-            optionMenu.addAction(undoCheckInAction)
-        }
-        
-        // Call auction
-        let callAction = UIAlertAction(title: "Call " + "341-231-\(indexPath.row)", style: .default, handler: callActionHandler)
-        optionMenu.addAction(callAction)
-        
-        // Add actions to the menu
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        optionMenu.addAction(cancelAction)
-        
-        // Display the menu
-        present(optionMenu, animated: true, completion: nil)
-        
-        // Deselect Row
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
-    */
-    
     
     // Adding share swipe actions button
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

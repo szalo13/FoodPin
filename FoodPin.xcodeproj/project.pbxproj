@@ -10,6 +10,8 @@
 		4F29EF0D1E9D529B00C813DB /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29EF0C1E9D529B00C813DB /* RestaurantDetailTableViewCell.swift */; };
 		4F8499D0200405C10012029C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4F8499CF200405C10012029C /* Podfile */; };
 		4F8499D2200408640012029C /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F8499D1200408640012029C /* Books.json */; };
+		4F8499D420041DB60012029C /* BooksCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8499D320041DB60012029C /* BooksCategoryViewController.swift */; };
+		4F8499D6200426F00012029C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8499D5200426F00012029C /* Book.swift */; };
 		4F8CFDF31E9AC4B6002B1D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF21E9AC4B6002B1D21 /* AppDelegate.swift */; };
 		4F8CFDF81E9AC4B6002B1D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF61E9AC4B6002B1D21 /* Main.storyboard */; };
 		4F8CFDFA1E9AC4B6002B1D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF91E9AC4B6002B1D21 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		4F29EF0C1E9D529B00C813DB /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4F8499CF200405C10012029C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		4F8499D1200408640012029C /* Books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
+		4F8499D320041DB60012029C /* BooksCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksCategoryViewController.swift; sourceTree = "<group>"; };
+		4F8499D5200426F00012029C /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		4F8CFDEF1E9AC4B6002B1D21 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8CFDF21E9AC4B6002B1D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F8CFDF71E9AC4B6002B1D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,11 +133,13 @@
 				4F8499CF200405C10012029C /* Podfile */,
 				4F8CFDF21E9AC4B6002B1D21 /* AppDelegate.swift */,
 				4F8CFDF61E9AC4B6002B1D21 /* Main.storyboard */,
+				4F8499D320041DB60012029C /* BooksCategoryViewController.swift */,
 				4F8CFDF91E9AC4B6002B1D21 /* Assets.xcassets */,
 				4F8CFDFB1E9AC4B6002B1D21 /* LaunchScreen.storyboard */,
 				4F8CFDFE1E9AC4B6002B1D21 /* Info.plist */,
 				4F8CFE201E9ADC2D002B1D21 /* Restaurant.swift */,
 				4F8CFE221E9AE198002B1D21 /* RestaurantTableViewController.swift */,
+				4F8499D5200426F00012029C /* Book.swift */,
 				4F8CFE241E9AE9AD002B1D21 /* RestaurantTableViewCell.swift */,
 				4F8CFE261E9BBA1D002B1D21 /* RestaurantDetailViewController.swift */,
 				4FD1BB1D1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift */,
@@ -365,6 +371,8 @@
 				4FD1BB1E1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift in Sources */,
 				4F8CFE271E9BBA1D002B1D21 /* RestaurantDetailViewController.swift in Sources */,
 				4F29EF0D1E9D529B00C813DB /* RestaurantDetailTableViewCell.swift in Sources */,
+				4F8499D6200426F00012029C /* Book.swift in Sources */,
+				4F8499D420041DB60012029C /* BooksCategoryViewController.swift in Sources */,
 				4F8CFE211E9ADC2D002B1D21 /* Restaurant.swift in Sources */,
 				4F8CFE231E9AE198002B1D21 /* RestaurantTableViewController.swift in Sources */,
 			);

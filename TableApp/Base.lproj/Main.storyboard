@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Books Category View Controller-->
         <scene sceneID="EX2-IZ-set">
             <objects>
-                <viewController id="8sp-rZ-Gfg" sceneMemberID="viewController">
+                <viewController id="8sp-rZ-Gfg" customClass="BooksCategoryViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yen-Q1-Ngi"/>
                         <viewControllerLayoutGuide type="bottom" id="gsX-WD-yyC"/>
@@ -24,11 +24,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm8-vv-fLa">
-                                <rect key="frame" x="167" y="159" width="40" height="30"/>
+                                <rect key="frame" x="115" y="159" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View1"/>
+                                <state key="normal" title="ShowRomanticBooks"/>
                                 <connections>
-                                    <segue destination="iTc-WL-o22" kind="show" id="OJI-d7-cod"/>
+                                    <segue destination="iTc-WL-o22" kind="show" identifier="showRomanticBooks" id="OJI-d7-cod"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-sk-CCl">
@@ -309,6 +309,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="i1Q-dl-bLc"/>
+        <segue reference="E2r-Kv-oYH"/>
     </inferredMetricsTieBreakers>
 </document>
