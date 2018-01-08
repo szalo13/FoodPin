@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TableApp/RestaurantTableViewController.swift"
-            timestampString = "513638917.75355"
+            timestampString = "537135345.596163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "restaurants"
             landmarkType = "24">
          </BreakpointContent>

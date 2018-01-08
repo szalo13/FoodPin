@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class RestaurantTableViewController: UITableViewController {
     
@@ -53,6 +54,12 @@ class RestaurantTableViewController: UITableViewController {
         // Remove the title of the back button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style:
             .plain, target: nil, action: nil)
+        
+        let path = Bundle.main.path(forResource: "Books", ofType: "json")!
+        let jsonString = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
+        let json = JSON(parseJSON: jsonString!)
+        
+        print(json)
         
         // Auto Cells
         tableView.estimatedRowHeight = 80
