@@ -21,8 +21,18 @@ class BooksCategoryViewController: UIViewController {
         let jsonString = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
         let results = JSON(parseJSON: jsonString!)
         
-        for case let result in results {
-            self.books.append(result)
+        for case let result in results.arrayValue {
+            let book = Book(
+                pages: result["pages"].int!,
+                link: result["link"].string!,
+                imageLink: result["imageLink"].string!,
+                language: result["language"].string!,
+                title: result["title"].string!,
+                year: result["year"].int!,
+                author: result["author"].string!,
+                country: result["country"].string!
+            )
+            self.books.append(book);
         }
         
         // Do any additional setup after loading the view.
