@@ -13,7 +13,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var tableView: UITableView!
     
-    var restaurant: Restaurant!
+    var book: Book!
     var restaurantImage =  ""
 
     
@@ -29,17 +29,17 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             //Configure the cell
             switch indexPath.row {
             case 0:
-                cell.fieldLabel.text = "Name"
-                cell.valueLabel.text = restaurant.name
+                cell.fieldLabel.text = "Title"
+                cell.valueLabel.text = self.book.title
             case 1:
                 cell.fieldLabel.text = "Type"
-                cell.valueLabel.text = restaurant.type
+                cell.valueLabel.text = self.book.author
             case 2:
-                cell.fieldLabel.text = "Location"
-                cell.valueLabel.text = restaurant.location
+                cell.fieldLabel.text = "Language"
+                cell.valueLabel.text = self.book.language
             case 3:
-                cell.fieldLabel.text = "Type"
-                cell.valueLabel.text = (restaurant.isVisited) ? "Yes" : "No"
+                cell.fieldLabel.text = "Country"
+                cell.valueLabel.text = self.book.country
             default:
                 cell.fieldLabel.text = ""
                 cell.fieldLabel.text = ""
@@ -57,7 +57,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.rowHeight = UITableViewAutomaticDimension
         
         // Signing photo
-        restaurantImageView.image = UIImage(named: self.restaurant.image)
+        restaurantImageView.image = UIImage(named: self.book.imageLink)
         
         // Do any additional setup after loading the view.
     }

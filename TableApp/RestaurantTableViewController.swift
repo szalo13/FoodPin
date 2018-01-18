@@ -90,10 +90,10 @@ class RestaurantTableViewController: UITableViewController {
         print(self.books[1].author)
         
         // Configure the cell
-        cell.nameLabel.text = restaurants[indexPath.row].name
-        cell.thumbnailImageView.image = UIImage(named: restaurants[indexPath.row].image)
-        cell.locationLabel.text = restaurants[indexPath.row].location
-        cell.typeLabel.text = restaurants[indexPath.row].type
+        cell.nameLabel.text = books[indexPath.row].title
+        cell.thumbnailImageView.image = UIImage(named: books[indexPath.row].imageLink)
+        cell.locationLabel.text = books[indexPath.row].author
+        cell.typeLabel.text = books[indexPath.row].language
         
         cell.accessoryType = restaurants[indexPath.row].isVisited ? .checkmark : .none
         
@@ -137,8 +137,8 @@ class RestaurantTableViewController: UITableViewController {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
-                destinationController.restaurant = restaurants[indexPath.row]
-                destinationController.restaurantImage = restaurants[indexPath.row].image
+                destinationController.book = self.books[indexPath.row]
+                destinationController.restaurantImage = books[indexPath.row].imageLink
             }
         }
     }
