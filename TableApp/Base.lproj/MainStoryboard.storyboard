@@ -24,35 +24,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm8-vv-fLa">
-                                <rect key="frame" x="140" y="159" width="96" height="30"/>
+                                <rect key="frame" x="163" y="159" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="English Books"/>
+                                <state key="normal" title="English"/>
                                 <connections>
                                     <segue destination="iTc-WL-o22" kind="show" identifier="showEnglishBooks" id="OJI-d7-cod"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-sk-CCl">
-                                <rect key="frame" x="136" y="244" width="101" height="65"/>
+                                <rect key="frame" x="159" y="244" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="German Books"/>
+                                <state key="normal" title="German"/>
                                 <connections>
-                                    <segue destination="iTc-WL-o22" kind="show" identifier="showGermanBooks" id="g43-M0-zQe"/>
+                                    <segue destination="iTc-WL-o22" kind="show" identifier="showGermanBooks" id="25q-Mg-CZx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMS-3V-Ffz">
-                                <rect key="frame" x="97" y="343" width="181" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-qZ-Vcm">
+                                <rect key="frame" x="144" y="341" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show United States Books"/>
+                                <state key="normal" title="United States"/>
                                 <connections>
-                                    <segue destination="iTc-WL-o22" kind="show" identifier="showUnitedStatesBooks" id="IEv-zO-b2f"/>
+                                    <segue destination="iTc-WL-o22" kind="show" identifier="showUnitedStatesBooks" id="bYX-Zc-b1O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-gI-OEa">
-                                <rect key="frame" x="96" y="444" width="181" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6g-wI-siG">
+                                <rect key="frame" x="148" y="423" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Other Books"/>
+                                <state key="normal" title="Other Books"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYC-h3-pq7">
+                                <rect key="frame" x="148" y="423" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Other Books"/>
                                 <connections>
-                                    <segue destination="iTc-WL-o22" kind="show" identifier="showOtherBooks" id="LhT-SG-hPO"/>
+                                    <segue destination="iTc-WL-o22" kind="show" identifier="showOtherBooks" id="dWN-kR-rg7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -326,6 +331,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="E2r-Kv-oYH"/>
-        <segue reference="LhT-SG-hPO"/>
+        <segue reference="bYX-Zc-b1O"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,10 +12,11 @@ import SwiftyJSON
 class BooksCategoryViewController: UIViewController {
     
     var books = [] as Array
-    var adventureBooks = [] as Array
-    var thrillerBooks = [] as Array
-    var comedyBooks = [] as Array
-    var romanticBooks = [] as Array
+    var englishBooks = [] as Array<Book>
+    var germanBooks = [] as Array<Book>
+    var unitedStatesBooks = [] as Array<Book>
+    
+    var otherBooks = [] as Array<Book>
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +37,23 @@ class BooksCategoryViewController: UIViewController {
                 author: result["author"].string!,
                 country: result["country"].string!
             )
-            self.books.append(book);
+            
+            switch(book.country) {
+            case "England":
+                self.englishBooks.append(book)
+            case "Germany":
+                self.germanBooks.append(book)
+            case "United States":
+                self.unitedStatesBooks.append(book)
+            default:
+                self.otherBooks.append(book)
+            }
         }
-        
+        print(self.germanBooks)
+        print(self.unitedStatesBooks)
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,11 +61,24 @@ class BooksCategoryViewController: UIViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(self.books)
-        if segue.identifier == "showRomanticBooks" {
-            let destinationController = segue.destination as! RestaurantTableViewController
-            destinationController.books = self.books as! Array<Book>
+        
+        var destinationBooks = [] as Array<Book>
+        switch(segue.identifier as! String) {
+        case "showEnglishBooks":
+            destinationBooks = self.englishBooks;
+        case "showGermanBooks":
+            destinationBooks = self.germanBooks;
+        case "showUnitedStatesBooks":
+            destinationBooks = self.unitedStatesBooks;
+        case "showOtherBooks":
+            destinationBooks = self.otherBooks;
+        default:
+            destinationBooks = self.otherBooks;
         }
+        
+        let destinationController = segue.destination as! RestaurantTableViewController
+        destinationController.books = destinationBooks
     }
-
+    
 }
+
