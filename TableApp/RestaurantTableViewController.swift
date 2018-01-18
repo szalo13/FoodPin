@@ -47,7 +47,7 @@ class RestaurantTableViewController: UITableViewController {
                 Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "22 Charlwood Street London SW1V 2DY Pimlico", phone: "432-344050", image: "caskpubkitchen.jpg", isVisited: false)
     ]
     
-    var books = [] as Array
+    var books = [] as Array<Book>
                     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +79,7 @@ class RestaurantTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurants.count
+        return books.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,6 +87,7 @@ class RestaurantTableViewController: UITableViewController {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
+        print(self.books[1].author)
         
         // Configure the cell
         cell.nameLabel.text = restaurants[indexPath.row].name

@@ -12,6 +12,10 @@ import SwiftyJSON
 class BooksCategoryViewController: UIViewController {
     
     var books = [] as Array
+    var adventureBooks = [] as Array
+    var thrillerBooks = [] as Array
+    var comedyBooks = [] as Array
+    var romanticBooks = [] as Array
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +49,10 @@ class BooksCategoryViewController: UIViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        print(self.books)
         if segue.identifier == "showRomanticBooks" {
             let destinationController = segue.destination as! RestaurantTableViewController
-            destinationController.books = self.books
+            destinationController.books = self.books as! Array<Book>
         }
     }
 
