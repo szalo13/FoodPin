@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyJSON
 
+var library = [] as Array<Book>
+
 class BooksCategoryViewController: UIViewController {
     
     var books = [] as Array
@@ -49,8 +51,6 @@ class BooksCategoryViewController: UIViewController {
                 self.otherBooks.append(book)
             }
         }
-        print(self.germanBooks)
-        print(self.unitedStatesBooks)
         // Do any additional setup after loading the view.
     }
     
@@ -63,6 +63,8 @@ class BooksCategoryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         var destinationBooks = [] as Array<Book>
+        let destinationController = segue.destination as! RestaurantTableViewController
+        
         switch(segue.identifier as! String) {
         case "showEnglishBooks":
             destinationBooks = self.englishBooks;
@@ -72,11 +74,14 @@ class BooksCategoryViewController: UIViewController {
             destinationBooks = self.unitedStatesBooks;
         case "showOtherBooks":
             destinationBooks = self.otherBooks;
+        case "showLibrary":
+            destinationController.allowDelete = true
+            destinationController.isLibrary = true
+            destinationBooks = library
         default:
             destinationBooks = self.otherBooks;
         }
         
-        let destinationController = segue.destination as! RestaurantTableViewController
         destinationController.books = destinationBooks
     }
     

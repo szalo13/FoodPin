@@ -48,6 +48,8 @@ class RestaurantTableViewController: UITableViewController {
     ]
     
     var books = [] as Array<Book>
+    var allowDelete = false
+    var isLibrary = false
                     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,8 +89,6 @@ class RestaurantTableViewController: UITableViewController {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
-        print(self.books[1].author)
-        
         // Configure the cell
         cell.nameLabel.text = books[indexPath.row].title
         cell.thumbnailImageView.image = UIImage(named: books[indexPath.row].imageLink)
@@ -108,27 +108,30 @@ class RestaurantTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         // Social sharing button
-        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: {
+        let addAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Add", handler: {
             (action, indexPath) -> Void in
+           
+            library.append(self.books[indexPath.row])
             
-            let defaultText = "Just checking in at \(self.restaurants[indexPath.row])"
-            
-            if let imageToShare = UIImage(named: self.restaurants[indexPath.row].image) {
-                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-                self.present(activityController, animated: true, completion: nil)
-            }
+            let defaultText = "Just checking in at \(self.books[indexPath.row])"
+
         })
-        shareAction.backgroundColor = UIColor(red: 48.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        addAction.backgroundColor = UIColor(red: 48.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
         
-        // Delete button
+
         let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: {
             (action, indexPath) -> Void in
-            
-            self.restaurants.remove(at: indexPath.row)
+
+            self.books.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            library.remove(at: indexPath.row)
         })
         
-        return [deleteAction, shareAction]
+        if (self.allowDelete) {
+            return [addAction, deleteAction]
+        } else {
+            return [addAction]
+        }
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

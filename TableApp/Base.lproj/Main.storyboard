@@ -55,6 +55,14 @@
                                     <segue destination="iTc-WL-o22" kind="show" identifier="showOtherBooks" id="LhT-SG-hPO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pym-Vv-LMt">
+                                <rect key="frame" x="98" y="517" width="181" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Library"/>
+                                <connections>
+                                    <segue destination="iTc-WL-o22" kind="show" identifier="showLibrary" id="aNQ-5I-GLj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -64,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="229.59999999999999" y="34.632683658170919"/>
         </scene>
-        <!--Food Pin-->
+        <!--Books-->
         <scene sceneID="JOi-tZ-fot">
             <objects>
                 <tableViewController id="iTc-WL-o22" customClass="RestaurantTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +142,7 @@
                             <outlet property="delegate" destination="iTc-WL-o22" id="Esu-gb-DkJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food Pin" id="f76-uF-aZl"/>
+                    <navigationItem key="navigationItem" title="Books" id="f76-uF-aZl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdN-GS-0RH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,6 +334,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="E2r-Kv-oYH"/>
-        <segue reference="LhT-SG-hPO"/>
+        <segue reference="aNQ-5I-GLj"/>
     </inferredMetricsTieBreakers>
 </document>
