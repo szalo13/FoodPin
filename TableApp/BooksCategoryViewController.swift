@@ -63,7 +63,7 @@ class BooksCategoryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         var destinationBooks = [] as Array<Book>
-        let destinationController = segue.destination as! RestaurantTableViewController
+        let destinationController = segue.destination as! NewRestaurantTableViewController
         
         switch(segue.identifier as! String) {
         case "showEnglishBooks":

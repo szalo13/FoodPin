@@ -47,6 +47,9 @@ class NewRestaurantTableViewController: UITableViewController {
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "22 Charlwood Street London SW1V 2DY Pimlico", phone: "432-344050", image: "caskpubkitchen.jpg", isVisited: false)
     ]
     
+    var books = [] as Array<Book>
+    var allowDelete = false
+    var isLibrary = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +89,7 @@ class NewRestaurantTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurants.count
+        return self.books.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -95,10 +98,10 @@ class NewRestaurantTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
         // Configure the cell
-        cell.nameLabel.text = restaurants[indexPath.row].name
-        cell.thumbnailImageView.image = UIImage(named: restaurants[indexPath.row].image)
-        cell.locationLabel.text = restaurants[indexPath.row].location
-        cell.typeLabel.text = restaurants[indexPath.row].type
+        cell.nameLabel.text = books[indexPath.row].title
+        cell.thumbnailImageView.image = UIImage(named: books[indexPath.row].imageLink)
+        cell.locationLabel.text = books[indexPath.row].author
+        cell.typeLabel.text = books[indexPath.row].language
         
         cell.accessoryType = restaurants[indexPath.row].isVisited ? .checkmark : .none
         
@@ -173,28 +176,32 @@ class NewRestaurantTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         // Social sharing button
-        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: {
+        let addAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Add", handler: {
             (action, indexPath) -> Void in
             
-            let defaultText = "Just checking in at \(self.restaurants[indexPath.row])"
+            library.append(self.books[indexPath.row])
             
-            if let imageToShare = UIImage(named: self.restaurants[indexPath.row].image) {
-                let activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-                self.present(activityController, animated: true, completion: nil)
-            }
+            let defaultText = "Just checking in at \(self.books[indexPath.row])"
+            
         })
-        shareAction.backgroundColor = UIColor(red: 48.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        addAction.backgroundColor = UIColor(red: 48.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
         
-        // Delete button
+        
         let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: {
             (action, indexPath) -> Void in
             
-            self.restaurants.remove(at: indexPath.row)
+            self.books.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            library.remove(at: indexPath.row)
         })
         
-        return [deleteAction, shareAction]
+        if (self.allowDelete) {
+            return [addAction, deleteAction]
+        } else {
+            return [addAction]
+        }
     }
+
     /*
      // Override to support rearranging the table view.
      override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
