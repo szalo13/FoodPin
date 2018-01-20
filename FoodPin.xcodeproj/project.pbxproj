@@ -13,7 +13,6 @@
 		4F8499D420041DB60012029C /* BooksCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8499D320041DB60012029C /* BooksCategoryViewController.swift */; };
 		4F8499D6200426F00012029C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8499D5200426F00012029C /* Book.swift */; };
 		4F8CFDF31E9AC4B6002B1D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF21E9AC4B6002B1D21 /* AppDelegate.swift */; };
-		4F8CFDF81E9AC4B6002B1D21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF61E9AC4B6002B1D21 /* Main.storyboard */; };
 		4F8CFDFA1E9AC4B6002B1D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDF91E9AC4B6002B1D21 /* Assets.xcassets */; };
 		4F8CFDFD1E9AC4B6002B1D21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8CFDFB1E9AC4B6002B1D21 /* LaunchScreen.storyboard */; };
 		4F8CFE081E9AC4B6002B1D21 /* FoodPinAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8CFE071E9AC4B6002B1D21 /* FoodPinAppTests.swift */; };
@@ -52,7 +51,6 @@
 		4F8499D5200426F00012029C /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		4F8CFDEF1E9AC4B6002B1D21 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8CFDF21E9AC4B6002B1D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F8CFDF71E9AC4B6002B1D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F8CFDF91E9AC4B6002B1D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F8CFDFC1E9AC4B6002B1D21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F8CFDFE1E9AC4B6002B1D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			children = (
 				4F8499CF200405C10012029C /* Podfile */,
 				4F8CFDF21E9AC4B6002B1D21 /* AppDelegate.swift */,
-				4F8CFDF61E9AC4B6002B1D21 /* Main.storyboard */,
 				4F8499D320041DB60012029C /* BooksCategoryViewController.swift */,
 				4F8CFE221E9AE198002B1D21 /* RestaurantTableViewController.swift */,
 				4FD1BB1D1FFD87F400342FD4 /* NewRestaurantTableViewCotroller.swift */,
@@ -293,7 +290,6 @@
 				4F8CFDFA1E9AC4B6002B1D21 /* Assets.xcassets in Resources */,
 				4F8499D0200405C10012029C /* Podfile in Resources */,
 				4F8499D2200408640012029C /* Books.json in Resources */,
-				4F8CFDF81E9AC4B6002B1D21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +412,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4F8CFDF61E9AC4B6002B1D21 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F8CFDF71E9AC4B6002B1D21 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4F8CFDFB1E9AC4B6002B1D21 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
