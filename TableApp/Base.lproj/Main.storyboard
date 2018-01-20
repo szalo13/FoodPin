@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -22,61 +23,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm8-vv-fLa">
-                                <rect key="frame" x="15" y="64" width="345" height="150"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm8-vv-fLa">
+                                <rect key="frame" x="30" y="64" width="315" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Koc-KG-LdC"/>
+                                    <constraint firstAttribute="height" constant="120" id="Rkv-Lg-jzP"/>
                                 </constraints>
                                 <state key="normal" title="English Books" image="england_flag"/>
                                 <connections>
                                     <segue destination="2by-JO-XLg" kind="show" identifier="showEnglishBooks" id="4mD-6h-fjM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-sk-CCl">
-                                <rect key="frame" x="16" y="214" width="343" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="06M-C3-UvP"/>
-                                </constraints>
-                                <state key="normal" title="German Books" image="german_flag"/>
-                                <connections>
-                                    <segue destination="2by-JO-XLg" kind="show" identifier="showGermanBooks" id="49U-ws-8kW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMS-3V-Ffz">
-                                <rect key="frame" x="15" y="364" width="345" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMS-3V-Ffz">
+                                <rect key="frame" x="30" y="334" width="315" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Jrb-3g-Osq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="xuX-qN-mlI"/>
                                 </constraints>
                                 <state key="normal" title="Show United States Books" image="usa_flag"/>
                                 <connections>
                                     <segue destination="2by-JO-XLg" kind="show" identifier="showUnitedStatesBooks" id="WBq-dD-bWh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pym-Vv-LMt">
-                                <rect key="frame" x="15" y="514" width="345" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pym-Vv-LMt">
+                                <rect key="frame" x="30" y="484" width="315" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="0Wm-E6-MWs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="nqn-rv-Vh5"/>
                                 </constraints>
                                 <state key="normal" title="Library" image="library-1"/>
                                 <connections>
                                     <segue destination="2by-JO-XLg" kind="show" identifier="showLibrary" id="acC-7x-UYh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-sk-CCl">
+                                <rect key="frame" x="30" y="184" width="315" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="06M-C3-UvP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Bte-Qq-sUZ"/>
+                                </constraints>
+                                <state key="normal" title="German Books" image="german_flag"/>
+                                <connections>
+                                    <segue destination="2by-JO-XLg" kind="show" identifier="showGermanBooks" id="49U-ws-8kW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DMS-3V-Ffz" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="15" id="4r8-9m-sIg"/>
-                            <constraint firstItem="0eM-sk-CCl" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leadingMargin" id="Jij-in-knX"/>
-                            <constraint firstAttribute="trailing" secondItem="Pym-Vv-LMt" secondAttribute="trailing" constant="15" id="K3t-gw-XJc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0eM-sk-CCl" secondAttribute="trailing" id="Owg-5k-MDy"/>
-                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="15" id="d0u-cc-y04"/>
-                            <constraint firstAttribute="trailing" secondItem="Gm8-vv-fLa" secondAttribute="trailing" id="dgu-FM-g97"/>
-                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="15" id="fzR-y0-M2Y"/>
-                            <constraint firstAttribute="trailing" secondItem="Gm8-vv-fLa" secondAttribute="trailing" constant="15" id="j9z-a6-21K"/>
-                            <constraint firstItem="DMS-3V-Ffz" firstAttribute="top" secondItem="0eM-sk-CCl" secondAttribute="bottom" id="jq3-xf-cqV"/>
-                            <constraint firstAttribute="trailing" secondItem="DMS-3V-Ffz" secondAttribute="trailing" constant="15" id="kq4-pR-gaC"/>
-                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="top" secondItem="DMS-3V-Ffz" secondAttribute="bottom" id="tN8-Li-9F3"/>
-                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="top" secondItem="yen-Q1-Ngi" secondAttribute="bottom" id="v4G-Jf-gve"/>
+                            <constraint firstAttribute="trailing" secondItem="Gm8-vv-fLa" secondAttribute="trailing" constant="30" id="02o-z5-fME"/>
+                            <constraint firstItem="0eM-sk-CCl" firstAttribute="top" secondItem="Gm8-vv-fLa" secondAttribute="bottom" id="2do-bc-I4q"/>
+                            <constraint firstItem="0eM-sk-CCl" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="7hL-t9-0cB"/>
+                            <constraint firstItem="DMS-3V-Ffz" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="Me0-3G-EuB"/>
+                            <constraint firstAttribute="trailing" secondItem="Pym-Vv-LMt" secondAttribute="trailing" constant="30" id="Nca-rB-YFZ"/>
+                            <constraint firstAttribute="trailing" secondItem="0eM-sk-CCl" secondAttribute="trailing" constant="30" id="bdj-7A-2pr"/>
+                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="iMy-yn-ARi"/>
+                            <constraint firstItem="DMS-3V-Ffz" firstAttribute="top" secondItem="0eM-sk-CCl" secondAttribute="bottom" id="qOG-Cq-FzE"/>
+                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="top" secondItem="DMS-3V-Ffz" secondAttribute="bottom" id="raP-OP-Aen"/>
+                            <constraint firstAttribute="trailing" secondItem="DMS-3V-Ffz" secondAttribute="trailing" constant="30" id="tFM-Xr-8QX"/>
+                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="top" secondItem="yen-Q1-Ngi" secondAttribute="bottom" id="tZU-bK-SgU"/>
+                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="zOD-R4-8y5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Eoe-AY-kkm"/>
@@ -265,7 +269,7 @@
             </objects>
             <point key="canvasLocation" x="1751" y="35"/>
         </scene>
-        <!--Food Pin-->
+        <!--Books-->
         <scene sceneID="wAj-jN-nFe">
             <objects>
                 <tableViewController id="2by-JO-XLg" customClass="NewRestaurantTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
@@ -338,7 +342,7 @@
                             <outlet property="delegate" destination="2by-JO-XLg" id="IUZ-aS-Xv9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food Pin" id="6q0-J3-IcL"/>
+                    <navigationItem key="navigationItem" title="Books" id="6q0-J3-IcL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbf-Vg-3pi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
