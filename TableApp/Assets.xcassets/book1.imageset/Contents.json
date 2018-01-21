@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "book1.jpeg",
       "scale" : "1x"
     },
     {

@@ -184,7 +184,7 @@ class NewRestaurantTableViewController: UITableViewController {
             let defaultText = "Just checking in at \(self.books[indexPath.row])"
             
         })
-        addAction.backgroundColor = UIColor(red: 48.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        addAction.backgroundColor = UIColor(red: 48.0/255.0, green: 213.0/255.0, blue: 200.0/255.0, alpha: 1.0)
         
         
         let deleteAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler: {
@@ -226,8 +226,8 @@ class NewRestaurantTableViewController: UITableViewController {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
-//                destinationController.restaurant = restaurants[indexPath.row]
-//                destinationController.restaurantImage = restaurants[indexPath.row].image
+                destinationController.book = self.books[indexPath.row]
+                destinationController.restaurantImage = self.books[indexPath.row].imageLink
             }
         }
     }

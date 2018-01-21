@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,63 +25,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm8-vv-fLa">
-                                <rect key="frame" x="30" y="64" width="315" height="120"/>
+                                <rect key="frame" x="15" y="79" width="135.5" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="Rkv-Lg-jzP"/>
+                                    <constraint firstAttribute="height" constant="80" id="LrD-vH-I8r"/>
+                                    <constraint firstAttribute="width" secondItem="Gm8-vv-fLa" secondAttribute="height" multiplier="354:209" id="jid-fI-jh0"/>
                                 </constraints>
-                                <state key="normal" title="English Books" image="england_flag"/>
+                                <state key="normal" title="English Books" image="library2"/>
                                 <connections>
                                     <segue destination="2by-JO-XLg" kind="show" identifier="showEnglishBooks" id="4mD-6h-fjM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMS-3V-Ffz">
-                                <rect key="frame" x="30" y="334" width="315" height="150"/>
+                                <rect key="frame" x="213.5" y="79" width="130.5" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Jrb-3g-Osq"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="xuX-qN-mlI"/>
+                                    <constraint firstAttribute="width" secondItem="DMS-3V-Ffz" secondAttribute="height" multiplier="127:78" id="CUp-xK-pqD"/>
+                                    <constraint firstAttribute="height" constant="80" id="TIp-Jf-OGu"/>
                                 </constraints>
-                                <state key="normal" title="Show United States Books" image="usa_flag"/>
+                                <state key="normal" title="Show United States Books" image="book2"/>
                                 <connections>
                                     <segue destination="2by-JO-XLg" kind="show" identifier="showUnitedStatesBooks" id="WBq-dD-bWh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pym-Vv-LMt">
-                                <rect key="frame" x="30" y="484" width="315" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-sk-CCl">
+                                <rect key="frame" x="31" y="502" width="313" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="0Wm-E6-MWs"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="nqn-rv-Vh5"/>
+                                    <constraint firstAttribute="height" constant="150" id="RCr-If-aWw"/>
                                 </constraints>
-                                <state key="normal" title="Library" image="library-1"/>
+                                <state key="normal" title="German Books" image="book1"/>
                                 <connections>
-                                    <segue destination="2by-JO-XLg" kind="show" identifier="showLibrary" id="acC-7x-UYh"/>
+                                    <segue destination="2by-JO-XLg" kind="show" identifier="showLibrary" id="49U-ws-8kW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-sk-CCl">
-                                <rect key="frame" x="30" y="184" width="315" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pym-Vv-LMt">
+                                <rect key="frame" x="31" y="174" width="139.5" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="06M-C3-UvP"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Bte-Qq-sUZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="RYW-0E-wQf"/>
+                                    <constraint firstAttribute="width" secondItem="Pym-Vv-LMt" secondAttribute="height" multiplier="155:89" id="laH-g7-L3m"/>
                                 </constraints>
-                                <state key="normal" title="German Books" image="german_flag"/>
+                                <state key="normal" title="Library" image="book3"/>
                                 <connections>
-                                    <segue destination="2by-JO-XLg" kind="show" identifier="showGermanBooks" id="49U-ws-8kW"/>
+                                    <segue destination="2by-JO-XLg" kind="show" identifier="showGermanyBooks" id="acC-7x-UYh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Gm8-vv-fLa" secondAttribute="trailing" constant="30" id="02o-z5-fME"/>
-                            <constraint firstItem="0eM-sk-CCl" firstAttribute="top" secondItem="Gm8-vv-fLa" secondAttribute="bottom" id="2do-bc-I4q"/>
-                            <constraint firstItem="0eM-sk-CCl" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="7hL-t9-0cB"/>
-                            <constraint firstItem="DMS-3V-Ffz" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="Me0-3G-EuB"/>
-                            <constraint firstAttribute="trailing" secondItem="Pym-Vv-LMt" secondAttribute="trailing" constant="30" id="Nca-rB-YFZ"/>
-                            <constraint firstAttribute="trailing" secondItem="0eM-sk-CCl" secondAttribute="trailing" constant="30" id="bdj-7A-2pr"/>
-                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="iMy-yn-ARi"/>
-                            <constraint firstItem="DMS-3V-Ffz" firstAttribute="top" secondItem="0eM-sk-CCl" secondAttribute="bottom" id="qOG-Cq-FzE"/>
-                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="top" secondItem="DMS-3V-Ffz" secondAttribute="bottom" id="raP-OP-Aen"/>
-                            <constraint firstAttribute="trailing" secondItem="DMS-3V-Ffz" secondAttribute="trailing" constant="30" id="tFM-Xr-8QX"/>
-                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="top" secondItem="yen-Q1-Ngi" secondAttribute="bottom" id="tZU-bK-SgU"/>
-                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="30" id="zOD-R4-8y5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DMS-3V-Ffz" secondAttribute="trailing" constant="15" id="6GR-QK-Oue"/>
+                            <constraint firstItem="DMS-3V-Ffz" firstAttribute="top" secondItem="yen-Q1-Ngi" secondAttribute="bottom" constant="15" id="8KX-E1-Ctc"/>
+                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leadingMargin" constant="15" id="DPn-tO-WZ5"/>
+                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leadingMargin" constant="15" id="PP0-zT-RQf"/>
+                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="top" secondItem="yen-Q1-Ngi" secondAttribute="bottom" constant="15" id="PVi-Nw-hMB"/>
+                            <constraint firstItem="0eM-sk-CCl" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leadingMargin" constant="15" id="U4G-wD-oAu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0eM-sk-CCl" secondAttribute="trailing" constant="15" id="UgU-gS-JX9"/>
+                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="top" secondItem="yen-Q1-Ngi" secondAttribute="bottom" constant="15" id="e7Q-gH-ewJ"/>
+                            <constraint firstItem="gsX-WD-yyC" firstAttribute="top" secondItem="0eM-sk-CCl" secondAttribute="bottom" constant="15" id="iEh-WT-qei"/>
+                            <constraint firstItem="Pym-Vv-LMt" firstAttribute="top" secondItem="Gm8-vv-fLa" secondAttribute="bottom" constant="15" id="lxS-Ne-ILF"/>
+                            <constraint firstItem="Gm8-vv-fLa" firstAttribute="leading" secondItem="gjy-kq-NSv" secondAttribute="leading" constant="15" id="un9-U9-oh1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Eoe-AY-kkm"/>
@@ -201,9 +201,8 @@
                                     <constraint firstAttribute="height" constant="390" id="EuL-aH-FXY"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OZZ-DU-taG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OZZ-DU-taG">
                                 <rect key="frame" x="16" y="462" width="343" height="205"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="cCU-nG-0K9" customClass="RestaurantDetailTableViewCell" customModule="FoodPin" customModuleProvider="target">
@@ -218,6 +217,9 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfD-Cn-dGU">
                                                             <rect key="frame" x="0.0" y="0.0" width="104.5" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="E74-hy-N8N"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -252,15 +254,35 @@
                                     <outlet property="delegate" destination="RlJ-jq-lpk" id="8jP-Ie-1fZ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-h8-6d9">
+                                <rect key="frame" x="87" y="406" width="200" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6Fd-T6-u7W"/>
+                                </constraints>
+                                <state key="normal" title="DODAJ DO BIBLIOTEKI">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToLibrary:" destination="RlJ-jq-lpk" eventType="touchDown" id="skW-lT-BRX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tOM-ZO-cPU" secondAttribute="trailing" id="7Xa-GH-MJW"/>
+                            <constraint firstItem="OZZ-DU-taG" firstAttribute="bottom" secondItem="AsZ-be-6Ns" secondAttribute="top" id="FTr-5E-x4B"/>
+                            <constraint firstItem="fsp-h8-6d9" firstAttribute="centerX" secondItem="OZZ-DU-taG" secondAttribute="centerX" id="I50-QS-ob9"/>
+                            <constraint firstItem="fsp-h8-6d9" firstAttribute="centerX" secondItem="tOM-ZO-cPU" secondAttribute="centerX" id="N7z-Hk-Zii"/>
                             <constraint firstItem="tOM-ZO-cPU" firstAttribute="top" secondItem="XZv-Nw-qEV" secondAttribute="bottom" id="Ob2-VK-BHw"/>
+                            <constraint firstItem="OZZ-DU-taG" firstAttribute="top" secondItem="fsp-h8-6d9" secondAttribute="bottom" constant="26" id="cdc-sJ-8ph"/>
+                            <constraint firstItem="OZZ-DU-taG" firstAttribute="leading" secondItem="yDR-EJ-LNm" secondAttribute="leadingMargin" id="juH-tX-tH9"/>
                             <constraint firstItem="tOM-ZO-cPU" firstAttribute="leading" secondItem="yDR-EJ-LNm" secondAttribute="leading" id="wIh-do-Zld"/>
+                            <constraint firstItem="fsp-h8-6d9" firstAttribute="top" secondItem="XZv-Nw-qEV" secondAttribute="bottom" constant="342" id="xNy-mv-pmx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="fsp-h8-6d9" id="h7H-iD-ed9"/>
                         <outlet property="restaurantImageView" destination="tOM-ZO-cPU" id="sx3-JK-fGq"/>
                         <outlet property="tableView" destination="OZZ-DU-taG" id="7OJ-hE-Nj8"/>
                     </connections>
@@ -350,13 +372,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="england_flag" width="1200" height="720"/>
-        <image name="german_flag" width="1280" height="768"/>
-        <image name="library-1" width="1000" height="750"/>
-        <image name="usa_flag" width="1280" height="674"/>
+        <image name="book1" width="384" height="131"/>
+        <image name="book2" width="238" height="212"/>
+        <image name="book3" width="276" height="182"/>
+        <image name="library2" width="241" height="209"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="acC-7x-UYh"/>
+        <segue reference="49U-ws-8kW"/>
         <segue reference="i1Q-dl-bLc"/>
     </inferredMetricsTieBreakers>
 </document>
